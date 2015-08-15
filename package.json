@@ -1,6 +1,6 @@
 {
   "name": "@more-markdown/dot-processor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Plugin for more-markdown to support rendering dot files.",
   "main": "lib/dot_processor.js",
   "dependencies": {
