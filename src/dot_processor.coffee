@@ -14,7 +14,9 @@ dotProcessor = (tokens, graph_template, error_template) ->
         id = "dg-" + uuid.v4()
         postProcessors.registerElemenbById id, (elem, done) ->
             d3.select(elem).call(render, graph)
-            elem.height = elem.getElementsByClassName('output')[0]?.getBoundingClientRect().height + 22
+            svgElem = elem.getElementsByClassName('output')[0]
+            svgHeight = svgElem?.getBoundingClientRect().height || 0
+            elem.style.height = svgHeight + 22
 
             # remove arrows in undirected graphs
             if !graph.isDirected()
